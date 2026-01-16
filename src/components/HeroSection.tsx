@@ -46,9 +46,9 @@ export default function HeroSection() {
             textAlign: 'center',
           }}
         >
-          Decoded &
+          The ultimate
           <div style={{ height: '12px' }} />
-          Jalupro
+          Collagen Protocol
         </h1>
       </div>
     </section>

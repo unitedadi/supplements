@@ -46,10 +46,12 @@ export default function ContentSection({
   return (
     <section
       id={id}
-      className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32 items-center px-6 py-16 sm:px-8 sm:py-20 lg:py-20"
+      className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32 items-center px-6 py-24 sm:px-8 sm:py-32 lg:py-40"
       style={{
         paddingLeft: 'clamp(24px, 5vw, 176px)',
         paddingRight: 'clamp(24px, 5vw, 72px)',
+        paddingTop: 'clamp(96px, 12vw, 160px)',
+        paddingBottom: 'clamp(96px, 12vw, 160px)',
       }}
     >
       {/* Image Container */}
@@ -84,7 +86,7 @@ export default function ContentSection({
           {title}
         </h2>
         <h3
-          className="text-lg sm:text-xl lg:text-2xl mb-5 lg:mb-6"
+          className="text-lg sm:text-xl lg:text-2xl mb-8 lg:mb-10"
           style={{
             fontFamily: 'var(--font-neue-haas-display)',
             fontWeight: 500,
