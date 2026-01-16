@@ -70,82 +70,8 @@ export default function CoolingRewarmingSection() {
   if (isMobile) {
     return (
       <section style={{ padding: '80px 24px' }}>
-        {/* Decoded (GS1) Section */}
-        <div style={{ marginBottom: '80px' }}>
-          <h2
-            style={{
-              fontFamily: 'var(--font-neue-haas-display)',
-              fontSize: '32px',
-              fontWeight: 500,
-              lineHeight: 1.1,
-              letterSpacing: '-0.025em',
-              color: '#121212',
-              marginBottom: '12px',
-            }}
-          >
-            Decoded (GS1)
-          </h2>
-          <h3
-            style={{
-              fontFamily: 'var(--font-neue-haas-display)',
-              fontSize: '18px',
-              fontWeight: 500,
-              lineHeight: 1.3,
-              letterSpacing: '-0.01em',
-              color: '#121212',
-              marginBottom: '32px',
-            }}
-          >
-            We don&apos;t stimulate. We supply.
-          </h3>
-          <div style={{ marginBottom: '32px', borderRadius: '16px', overflow: 'hidden' }}>
-            <Image
-              src="/images/frame_8.png"
-              alt="Cooling chamber"
-              width={800}
-              height={500}
-              style={{ width: '100%', height: 'auto', borderRadius: '16px' }}
-            />
-          </div>
-          <p
-            style={{
-              fontFamily: 'var(--font-neue-haas-text)',
-              fontSize: '15px',
-              fontWeight: 400,
-              lineHeight: 1.7,
-              color: '#121212',
-              marginBottom: '20px',
-            }}
-          >
-            Collagen loss happens faster than the body can replace it. Aging, stress, gut dysfunction, and inflammation reduce both collagen levels and absorption. Waiting for the body to produce more—without raw materials—creates a bottleneck.
-          </p>
-          <p
-            style={{
-              fontFamily: 'var(--font-neue-haas-text)',
-              fontSize: '15px',
-              fontWeight: 400,
-              lineHeight: 1.7,
-              color: '#121212',
-              marginBottom: '20px',
-            }}
-          >
-            GS1 bypasses this limitation by delivering collagen directly, supplying three bioavailable collagen sources and a high concentration of essential amino acids the body cannot synthesize on its own. These micro-building blocks enter circulation ready for use, supporting skin structure, joint integrity, and connective tissue repair.
-          </p>
-          <p
-            style={{
-              fontFamily: 'var(--font-neue-haas-text)',
-              fontSize: '15px',
-              fontWeight: 400,
-              lineHeight: 1.7,
-              color: '#121212',
-            }}
-          >
-            This is not a signal. It&apos;s the material.
-          </p>
-        </div>
-
         {/* Jalupro Section */}
-        <div>
+        <div style={{ marginBottom: '80px' }}>
           <h2
             style={{
               fontFamily: 'var(--font-neue-haas-display)',
@@ -203,9 +129,84 @@ export default function CoolingRewarmingSection() {
               fontWeight: 400,
               lineHeight: 1.7,
               color: '#121212',
+              marginBottom: '32px',
             }}
           >
             This is not replacement. It&apos;s regeneration.
+          </p>
+          <div style={{ borderRadius: '16px', overflow: 'hidden' }}>
+            <Image
+              src="/images/frame_9.png"
+              alt="Jalupro"
+              width={800}
+              height={500}
+              style={{ width: '100%', height: 'auto', borderRadius: '16px' }}
+            />
+          </div>
+        </div>
+
+        {/* Decoded (GS1) Section */}
+        <div>
+          <h2
+            style={{
+              fontFamily: 'var(--font-neue-haas-display)',
+              fontSize: '32px',
+              fontWeight: 500,
+              lineHeight: 1.1,
+              letterSpacing: '-0.025em',
+              color: '#121212',
+              marginBottom: '12px',
+            }}
+          >
+            Decoded (GS1)
+          </h2>
+          <h3
+            style={{
+              fontFamily: 'var(--font-neue-haas-display)',
+              fontSize: '18px',
+              fontWeight: 500,
+              lineHeight: 1.3,
+              letterSpacing: '-0.01em',
+              color: '#121212',
+              marginBottom: '32px',
+            }}
+          >
+            We don&apos;t stimulate. We supply.
+          </h3>
+          <p
+            style={{
+              fontFamily: 'var(--font-neue-haas-text)',
+              fontSize: '15px',
+              fontWeight: 400,
+              lineHeight: 1.7,
+              color: '#121212',
+              marginBottom: '20px',
+            }}
+          >
+            Collagen loss happens faster than the body can replace it. Aging, stress, gut dysfunction, and inflammation reduce both collagen levels and absorption. Waiting for the body to produce more—without raw materials—creates a bottleneck.
+          </p>
+          <p
+            style={{
+              fontFamily: 'var(--font-neue-haas-text)',
+              fontSize: '15px',
+              fontWeight: 400,
+              lineHeight: 1.7,
+              color: '#121212',
+              marginBottom: '20px',
+            }}
+          >
+            GS1 bypasses this limitation by delivering collagen directly, supplying three bioavailable collagen sources and a high concentration of essential amino acids the body cannot synthesize on its own. These micro-building blocks enter circulation ready for use, supporting skin structure, joint integrity, and connective tissue repair.
+          </p>
+          <p
+            style={{
+              fontFamily: 'var(--font-neue-haas-text)',
+              fontSize: '15px',
+              fontWeight: 400,
+              lineHeight: 1.7,
+              color: '#121212',
+            }}
+          >
+            This is not a signal. It&apos;s the material.
           </p>
         </div>
       </section>
@@ -247,7 +248,7 @@ export default function CoolingRewarmingSection() {
               }}
             >
               <Image
-                src="/images/frame_8.png"
+                src="/images/frame_9.png"
                 alt="Cooling chamber"
                 fill
                 className="object-cover object-left"
@@ -259,88 +260,13 @@ export default function CoolingRewarmingSection() {
             </div>
           </div>
 
-          {/* Cooling Text - positioned at left */}
+          {/* Jalupro Text - positioned at left */}
           <div
             className="absolute left-0 top-0 h-full flex items-center"
             style={{
               width: '50vw',
               paddingLeft: '120px',
               paddingRight: '40px',
-            }}
-          >
-            <div style={{ maxWidth: '480px' }}>
-              <h2
-                style={{
-                  fontFamily: 'var(--font-neue-haas-display)',
-                  fontSize: '48px',
-                  fontWeight: 500,
-                  lineHeight: 1.1,
-                  letterSpacing: '-0.025em',
-                  marginBottom: '16px',
-                  color: '#121212',
-                }}
-              >
-                Decoded (GS1)
-              </h2>
-              <h3
-                style={{
-                  fontFamily: 'var(--font-neue-haas-display)',
-                  fontSize: '24px',
-                  fontWeight: 500,
-                  lineHeight: 1.3,
-                  letterSpacing: '-0.01em',
-                  marginBottom: '32px',
-                  color: '#121212',
-                }}
-              >
-                We don&apos;t stimulate. We supply.
-              </h3>
-              <p
-                style={{
-                  fontFamily: 'var(--font-neue-haas-text)',
-                  fontSize: '16px',
-                  fontWeight: 400,
-                  lineHeight: 1.6,
-                  color: '#121212',
-                  marginBottom: '20px',
-                }}
-              >
-                Collagen loss happens faster than the body can replace it. Aging, stress, gut dysfunction, and inflammation reduce both collagen levels and absorption. Waiting for the body to produce more—without raw materials—creates a bottleneck.
-              </p>
-              <p
-                style={{
-                  fontFamily: 'var(--font-neue-haas-text)',
-                  fontSize: '16px',
-                  fontWeight: 400,
-                  lineHeight: 1.6,
-                  color: '#121212',
-                  marginBottom: '20px',
-                }}
-              >
-                GS1 bypasses this limitation by delivering collagen directly, supplying three bioavailable collagen sources and a high concentration of essential amino acids the body cannot synthesize on its own. These micro-building blocks enter circulation ready for use, supporting skin structure, joint integrity, and connective tissue repair.
-              </p>
-              <p
-                style={{
-                  fontFamily: 'var(--font-neue-haas-text)',
-                  fontSize: '16px',
-                  fontWeight: 400,
-                  lineHeight: 1.6,
-                  color: '#121212',
-                }}
-              >
-                This is not a signal. It&apos;s the material.
-              </p>
-            </div>
-          </div>
-
-          {/* Rewarming Text - positioned at right */}
-          <div
-            className="absolute top-0 h-full flex items-center justify-end"
-            style={{
-              left: '150vw',
-              width: '50vw',
-              paddingRight: '120px',
-              paddingLeft: '40px',
             }}
           >
             <div style={{ maxWidth: '480px' }}>
@@ -404,6 +330,81 @@ export default function CoolingRewarmingSection() {
                 }}
               >
                 This is not replacement. It&apos;s regeneration.
+              </p>
+            </div>
+          </div>
+
+          {/* Decoded (GS1) Text - positioned at right */}
+          <div
+            className="absolute top-0 h-full flex items-center justify-end"
+            style={{
+              left: '150vw',
+              width: '50vw',
+              paddingRight: '120px',
+              paddingLeft: '40px',
+            }}
+          >
+            <div style={{ maxWidth: '480px' }}>
+              <h2
+                style={{
+                  fontFamily: 'var(--font-neue-haas-display)',
+                  fontSize: '48px',
+                  fontWeight: 500,
+                  lineHeight: 1.1,
+                  letterSpacing: '-0.025em',
+                  marginBottom: '16px',
+                  color: '#121212',
+                }}
+              >
+                Decoded (GS1)
+              </h2>
+              <h3
+                style={{
+                  fontFamily: 'var(--font-neue-haas-display)',
+                  fontSize: '24px',
+                  fontWeight: 500,
+                  lineHeight: 1.3,
+                  letterSpacing: '-0.01em',
+                  marginBottom: '32px',
+                  color: '#121212',
+                }}
+              >
+                We don&apos;t stimulate. We supply.
+              </h3>
+              <p
+                style={{
+                  fontFamily: 'var(--font-neue-haas-text)',
+                  fontSize: '16px',
+                  fontWeight: 400,
+                  lineHeight: 1.6,
+                  color: '#121212',
+                  marginBottom: '20px',
+                }}
+              >
+                Collagen loss happens faster than the body can replace it. Aging, stress, gut dysfunction, and inflammation reduce both collagen levels and absorption. Waiting for the body to produce more—without raw materials—creates a bottleneck.
+              </p>
+              <p
+                style={{
+                  fontFamily: 'var(--font-neue-haas-text)',
+                  fontSize: '16px',
+                  fontWeight: 400,
+                  lineHeight: 1.6,
+                  color: '#121212',
+                  marginBottom: '20px',
+                }}
+              >
+                GS1 bypasses this limitation by delivering collagen directly, supplying three bioavailable collagen sources and a high concentration of essential amino acids the body cannot synthesize on its own. These micro-building blocks enter circulation ready for use, supporting skin structure, joint integrity, and connective tissue repair.
+              </p>
+              <p
+                style={{
+                  fontFamily: 'var(--font-neue-haas-text)',
+                  fontSize: '16px',
+                  fontWeight: 400,
+                  lineHeight: 1.6,
+                  color: '#121212',
+                }}
+              >
+                This is not a signal. It&apos;s the material.
               </p>
             </div>
           </div>
