@@ -3,16 +3,15 @@
 import Image from 'next/image';
 
 const galleryImages = [
-  { src: '/images/team-003.webp', alt: 'Lab work' },
-  { src: '/images/team-006.webp', alt: 'Research' },
-  { src: '/images/team-009.webp', alt: 'Team collaboration' },
-  { src: '/images/team-002.webp', alt: 'Innovation' },
-  { src: '/images/team-007.webp', alt: 'Engineering' },
-  { src: '/images/team-012.webp', alt: 'Science' },
-  { src: '/images/team-010.webp', alt: 'Discovery' },
-  { src: '/images/team-008.webp', alt: 'Progress' },
-  { src: '/images/team-001.webp', alt: 'Future' },
-  { src: '/images/team-011.webp', alt: 'Dedication' },
+  { src: '/images/1.png', alt: 'Gallery 1' },
+  { src: '/images/2.png', alt: 'Gallery 2' },
+  { src: '/images/3.png', alt: 'Gallery 3' },
+  { src: '/images/4.png', alt: 'Gallery 4' },
+  { src: '/images/5.png', alt: 'Gallery 5' },
+  { src: '/images/6.png', alt: 'Gallery 6' },
+  { src: '/images/7.png', alt: 'Gallery 7' },
+  { src: '/images/8.png', alt: 'Gallery 8' },
+  { src: '/images/9.png', alt: 'Gallery 9' },
 ];
 
 export default function TeamGallerySection() {
@@ -111,7 +110,7 @@ export default function TeamGallerySection() {
       </div>
 
       {/* Gallery Row 1 */}
-      <div className="relative overflow-hidden mb-10">
+      <div className="relative overflow-hidden" style={{ marginBottom: '48px' }}>
         <div
           className="flex gap-5 scroll-left"
           style={{ width: 'fit-content' }}
