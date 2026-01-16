@@ -113,9 +113,15 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
   }, [items]);
 
-  const openCart = useCallback(() => setIsOpen(true), []);
+  const openCart = useCallback(() => {
+    setIsCheckingOut(false); // Reset checkout state when opening cart
+    setIsOpen(true);
+  }, []);
   const closeCart = useCallback(() => setIsOpen(false), []);
-  const toggleCart = useCallback(() => setIsOpen((prev) => !prev), []);
+  const toggleCart = useCallback(() => {
+    setIsCheckingOut(false); // Reset checkout state when toggling cart
+    setIsOpen((prev) => !prev);
+  }, []);
 
   return (
     <CartContext.Provider
