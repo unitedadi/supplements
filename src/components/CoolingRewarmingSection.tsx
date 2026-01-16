@@ -8,8 +8,21 @@ export default function CoolingRewarmingSection() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isInView, setIsInView] = useState(false);
   const [sectionTop, setSectionTop] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
+
     const handleScroll = () => {
       if (!sectionRef.current) return;
 
@@ -33,7 +46,7 @@ export default function CoolingRewarmingSection() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMobile]);
 
   // The entire horizontal strip moves left
   // At 0% progress: show Cooling (left) + partial image (right)
@@ -53,6 +66,146 @@ export default function CoolingRewarmingSection() {
     }
   };
 
+  // Mobile layout - simple stacked sections
+  if (isMobile) {
+    return (
+      <section className="py-16 px-6">
+        {/* Decoded (GS1) Section */}
+        <div className="mb-16">
+          <h2
+            className="text-3xl sm:text-4xl mb-3"
+            style={{
+              fontFamily: 'var(--font-neue-haas-display)',
+              fontWeight: 500,
+              lineHeight: 1.1,
+              letterSpacing: '-0.025em',
+              color: '#121212',
+            }}
+          >
+            Decoded (GS1)
+          </h2>
+          <h3
+            className="text-lg sm:text-xl mb-6"
+            style={{
+              fontFamily: 'var(--font-neue-haas-display)',
+              fontWeight: 500,
+              lineHeight: 1.3,
+              letterSpacing: '-0.01em',
+              color: '#121212',
+            }}
+          >
+            We don&apos;t stimulate. We supply.
+          </h3>
+          <div className="mb-6 rounded-2xl overflow-hidden">
+            <Image
+              src="/images/perfusion-001.webp"
+              alt="Cooling chamber"
+              width={800}
+              height={500}
+              className="w-full h-auto"
+              style={{ borderRadius: '16px' }}
+            />
+          </div>
+          <p
+            className="text-sm sm:text-base mb-4"
+            style={{
+              fontFamily: 'var(--font-neue-haas-text)',
+              fontWeight: 400,
+              lineHeight: 1.6,
+              color: '#121212',
+            }}
+          >
+            Collagen loss happens faster than the body can replace it. Aging, stress, gut dysfunction, and inflammation reduce both collagen levels and absorption. Waiting for the body to produce more—without raw materials—creates a bottleneck.
+          </p>
+          <p
+            className="text-sm sm:text-base mb-4"
+            style={{
+              fontFamily: 'var(--font-neue-haas-text)',
+              fontWeight: 400,
+              lineHeight: 1.6,
+              color: '#121212',
+            }}
+          >
+            GS1 bypasses this limitation by delivering collagen directly, supplying three bioavailable collagen sources and a high concentration of essential amino acids the body cannot synthesize on its own. These micro-building blocks enter circulation ready for use, supporting skin structure, joint integrity, and connective tissue repair.
+          </p>
+          <p
+            className="text-sm sm:text-base"
+            style={{
+              fontFamily: 'var(--font-neue-haas-text)',
+              fontWeight: 400,
+              lineHeight: 1.6,
+              color: '#121212',
+            }}
+          >
+            This is not a signal. It&apos;s the material.
+          </p>
+        </div>
+
+        {/* Jalupro Section */}
+        <div>
+          <h2
+            className="text-3xl sm:text-4xl mb-3"
+            style={{
+              fontFamily: 'var(--font-neue-haas-display)',
+              fontWeight: 500,
+              lineHeight: 1.1,
+              letterSpacing: '-0.025em',
+              color: '#121212',
+            }}
+          >
+            Jalupro
+          </h2>
+          <h3
+            className="text-lg sm:text-xl mb-6"
+            style={{
+              fontFamily: 'var(--font-neue-haas-display)',
+              fontWeight: 500,
+              lineHeight: 1.3,
+              letterSpacing: '-0.01em',
+              color: '#121212',
+            }}
+          >
+            We don&apos;t add collagen. We activate it.
+          </h3>
+          <p
+            className="text-sm sm:text-base mb-4"
+            style={{
+              fontFamily: 'var(--font-neue-haas-text)',
+              fontWeight: 400,
+              lineHeight: 1.6,
+              color: '#121212',
+            }}
+          >
+            The body produces collagen only when fibroblasts receive the right biochemical signals. Over time, these signals weaken. Cells slow down. Production drops.
+          </p>
+          <p
+            className="text-sm sm:text-base mb-4"
+            style={{
+              fontFamily: 'var(--font-neue-haas-text)',
+              fontWeight: 400,
+              lineHeight: 1.6,
+              color: '#121212',
+            }}
+          >
+            Jalupro works by re-educating fibroblasts, delivering targeted amino acids and biorevitalizing compounds directly into the skin. This triggers cellular activity, encouraging the body to restart its own collagen synthesis, improve hydration, and restore tissue quality from within.
+          </p>
+          <p
+            className="text-sm sm:text-base"
+            style={{
+              fontFamily: 'var(--font-neue-haas-text)',
+              fontWeight: 400,
+              lineHeight: 1.6,
+              color: '#121212',
+            }}
+          >
+            This is not replacement. It&apos;s regeneration.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  // Desktop layout - horizontal scroll effect
   return (
     <section ref={sectionRef} className="relative" style={{ height: '300vh' }}>
       {/* Fixed viewport container */}
