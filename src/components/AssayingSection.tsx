@@ -1,11 +1,24 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 export default function AssayingSection() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <section
       className="relative flex items-center overflow-hidden"
       style={{
-        minHeight: '130vh',
+        minHeight: isMobile ? 'auto' : '130vh',
         backgroundColor: '#c52f0b',
       }}
     >
@@ -13,7 +26,7 @@ export default function AssayingSection() {
       <div
         className="absolute top-0 left-0 right-0 z-0 pointer-events-none"
         style={{
-          height: '45%',
+          height: isMobile ? '25%' : '45%',
           background: `
             radial-gradient(ellipse 120% 100% at 50% 0%,
               #f7f3ec 0%,
@@ -33,7 +46,7 @@ export default function AssayingSection() {
         className="relative z-10"
         style={{
           maxWidth: '800px',
-          padding: '128px 112px 128px 160px',
+          padding: isMobile ? '200px 24px 80px 24px' : '128px 112px 128px 160px',
         }}
       >
         <h2

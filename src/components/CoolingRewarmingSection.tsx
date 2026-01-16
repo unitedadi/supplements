@@ -69,71 +69,74 @@ export default function CoolingRewarmingSection() {
   // Mobile layout - simple stacked sections
   if (isMobile) {
     return (
-      <section className="py-16 px-6">
+      <section style={{ padding: '80px 24px' }}>
         {/* Decoded (GS1) Section */}
-        <div className="mb-16">
+        <div style={{ marginBottom: '80px' }}>
           <h2
-            className="text-3xl sm:text-4xl mb-3"
             style={{
               fontFamily: 'var(--font-neue-haas-display)',
+              fontSize: '32px',
               fontWeight: 500,
               lineHeight: 1.1,
               letterSpacing: '-0.025em',
               color: '#121212',
+              marginBottom: '12px',
             }}
           >
             Decoded (GS1)
           </h2>
           <h3
-            className="text-lg sm:text-xl mb-6"
             style={{
               fontFamily: 'var(--font-neue-haas-display)',
+              fontSize: '18px',
               fontWeight: 500,
               lineHeight: 1.3,
               letterSpacing: '-0.01em',
               color: '#121212',
+              marginBottom: '32px',
             }}
           >
             We don&apos;t stimulate. We supply.
           </h3>
-          <div className="mb-6 rounded-2xl overflow-hidden">
+          <div style={{ marginBottom: '32px', borderRadius: '16px', overflow: 'hidden' }}>
             <Image
-              src="/images/perfusion-001.webp"
+              src="/images/frame_8.png"
               alt="Cooling chamber"
               width={800}
               height={500}
-              className="w-full h-auto"
-              style={{ borderRadius: '16px' }}
+              style={{ width: '100%', height: 'auto', borderRadius: '16px' }}
             />
           </div>
           <p
-            className="text-sm sm:text-base mb-4"
             style={{
               fontFamily: 'var(--font-neue-haas-text)',
+              fontSize: '15px',
               fontWeight: 400,
-              lineHeight: 1.6,
+              lineHeight: 1.7,
               color: '#121212',
+              marginBottom: '20px',
             }}
           >
             Collagen loss happens faster than the body can replace it. Aging, stress, gut dysfunction, and inflammation reduce both collagen levels and absorption. Waiting for the body to produce more—without raw materials—creates a bottleneck.
           </p>
           <p
-            className="text-sm sm:text-base mb-4"
             style={{
               fontFamily: 'var(--font-neue-haas-text)',
+              fontSize: '15px',
               fontWeight: 400,
-              lineHeight: 1.6,
+              lineHeight: 1.7,
               color: '#121212',
+              marginBottom: '20px',
             }}
           >
             GS1 bypasses this limitation by delivering collagen directly, supplying three bioavailable collagen sources and a high concentration of essential amino acids the body cannot synthesize on its own. These micro-building blocks enter circulation ready for use, supporting skin structure, joint integrity, and connective tissue repair.
           </p>
           <p
-            className="text-sm sm:text-base"
             style={{
               fontFamily: 'var(--font-neue-haas-text)',
+              fontSize: '15px',
               fontWeight: 400,
-              lineHeight: 1.6,
+              lineHeight: 1.7,
               color: '#121212',
             }}
           >
@@ -144,57 +147,61 @@ export default function CoolingRewarmingSection() {
         {/* Jalupro Section */}
         <div>
           <h2
-            className="text-3xl sm:text-4xl mb-3"
             style={{
               fontFamily: 'var(--font-neue-haas-display)',
+              fontSize: '32px',
               fontWeight: 500,
               lineHeight: 1.1,
               letterSpacing: '-0.025em',
               color: '#121212',
+              marginBottom: '12px',
             }}
           >
             Jalupro
           </h2>
           <h3
-            className="text-lg sm:text-xl mb-6"
             style={{
               fontFamily: 'var(--font-neue-haas-display)',
+              fontSize: '18px',
               fontWeight: 500,
               lineHeight: 1.3,
               letterSpacing: '-0.01em',
               color: '#121212',
+              marginBottom: '32px',
             }}
           >
             We don&apos;t add collagen. We activate it.
           </h3>
           <p
-            className="text-sm sm:text-base mb-4"
             style={{
               fontFamily: 'var(--font-neue-haas-text)',
+              fontSize: '15px',
               fontWeight: 400,
-              lineHeight: 1.6,
+              lineHeight: 1.7,
               color: '#121212',
+              marginBottom: '20px',
             }}
           >
             The body produces collagen only when fibroblasts receive the right biochemical signals. Over time, these signals weaken. Cells slow down. Production drops.
           </p>
           <p
-            className="text-sm sm:text-base mb-4"
             style={{
               fontFamily: 'var(--font-neue-haas-text)',
+              fontSize: '15px',
               fontWeight: 400,
-              lineHeight: 1.6,
+              lineHeight: 1.7,
               color: '#121212',
+              marginBottom: '20px',
             }}
           >
             Jalupro works by re-educating fibroblasts, delivering targeted amino acids and biorevitalizing compounds directly into the skin. This triggers cellular activity, encouraging the body to restart its own collagen synthesis, improve hydration, and restore tissue quality from within.
           </p>
           <p
-            className="text-sm sm:text-base"
             style={{
               fontFamily: 'var(--font-neue-haas-text)',
+              fontSize: '15px',
               fontWeight: 400,
-              lineHeight: 1.6,
+              lineHeight: 1.7,
               color: '#121212',
             }}
           >
@@ -240,7 +247,7 @@ export default function CoolingRewarmingSection() {
               }}
             >
               <Image
-                src="/images/perfusion-001.webp"
+                src="/images/frame_8.png"
                 alt="Cooling chamber"
                 fill
                 className="object-cover object-left"
