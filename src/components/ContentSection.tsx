@@ -46,27 +46,23 @@ export default function ContentSection({
   return (
     <section
       id={id}
-      className="grid grid-cols-2 gap-32 items-center"
+      className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32 items-center px-6 py-16 sm:px-8 sm:py-20 lg:py-20"
       style={{
-        padding: '80px 72px 80px 176px',
+        paddingLeft: 'clamp(24px, 5vw, 176px)',
+        paddingRight: 'clamp(24px, 5vw, 72px)',
       }}
     >
       {/* Image Container */}
       <div
-        className={reverse ? 'order-2' : ''}
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
+        className={`${reverse ? 'lg:order-2' : ''} flex items-center justify-center`}
       >
         <Image
           src={imageSrc}
           alt={imageAlt}
           width={450}
           height={340}
+          className="w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[450px]"
           style={{
-            maxWidth: '100%',
             height: 'auto',
             borderRadius: '16px',
           }}
@@ -74,28 +70,26 @@ export default function ContentSection({
       </div>
 
       {/* Text Content */}
-      <div className={reverse ? 'order-1' : ''} style={{ maxWidth: '560px' }}>
+      <div className={`${reverse ? 'lg:order-1' : ''} max-w-[560px]`}>
         <h2
+          className="text-3xl sm:text-4xl lg:text-5xl mb-3"
           style={{
             fontFamily: 'var(--font-neue-haas-display)',
-            fontSize: '48px',
             fontWeight: 500,
             lineHeight: 1.1,
             letterSpacing: '-0.025em',
-            marginBottom: '12px',
             color: '#121212',
           }}
         >
           {title}
         </h2>
         <h3
+          className="text-lg sm:text-xl lg:text-2xl mb-5 lg:mb-6"
           style={{
             fontFamily: 'var(--font-neue-haas-display)',
-            fontSize: '24px',
             fontWeight: 500,
             lineHeight: 1.3,
             letterSpacing: '-0.01em',
-            marginBottom: '24px',
             color: '#121212',
           }}
         >
@@ -104,9 +98,9 @@ export default function ContentSection({
         {paragraphs.map((text, idx) => (
           <p
             key={idx}
+            className="text-sm sm:text-base"
             style={{
               fontFamily: 'var(--font-neue-haas-text)',
-              fontSize: '16px',
               fontWeight: 400,
               lineHeight: 1.6,
               color: '#121212',
@@ -117,7 +111,7 @@ export default function ContentSection({
           </p>
         ))}
         {showPreorder && (
-          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap', marginBottom: '24px' }}>
             {price && (
               <span
                 style={{

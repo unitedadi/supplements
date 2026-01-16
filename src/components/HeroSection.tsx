@@ -47,7 +47,7 @@ export default function HeroSection() {
           }}
         >
           Decoded &
-          <br />
+          <div style={{ height: '12px' }} />
           Jalupro
         </h1>
       </div>

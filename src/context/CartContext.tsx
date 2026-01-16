@@ -91,7 +91,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
       console.log('Checkout request:', requestBody);
 
-      const response = await fetch('https://api-dev.homenursing.dardoc.com/public/checkout/products', {
+      const response = await fetch('https://api.homenursing.dardoc.com/public/checkout/products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
