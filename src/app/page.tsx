@@ -29,7 +29,8 @@ export default function Home() {
         showPreorder
         productId="decoded-gs1"
         productSubtitle="Triple Collagen Complex"
-        price={499}
+        price={399}
+        originalPrice={499}
       />
 
       {/* Jalupro Section */}
@@ -46,7 +47,8 @@ export default function Home() {
         showPreorder
         productId="jalupro"
         productSubtitle="Amino Acid & HA Complex"
-        price={499}
+        price={399}
+        originalPrice={499}
       />
 
       <CoolingRewarmingSection />

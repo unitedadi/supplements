@@ -107,6 +107,38 @@ export default function Header() {
         ))}
       </nav>
 
+      {/* Mobile Navigation - Auto expands/collapses based on scroll */}
+      <nav
+        className="xl:hidden flex items-center gap-4"
+        style={{
+          opacity: showNav ? 1 : 0,
+          maxWidth: showNav ? '300px' : '0px',
+          overflow: 'hidden',
+          transition: 'opacity 0.4s ease, max-width 0.4s ease',
+        }}
+      >
+        {[
+          { href: '#decoded', label: 'Decoded' },
+          { href: '#jalupro', label: 'Jalupro' },
+        ].map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className="hover:opacity-70 text-sm"
+            style={{
+              fontFamily: 'var(--font-neue-haas-text), Arial, Helvetica, sans-serif',
+              fontWeight: 500,
+              color: isOnDark ? '#f7f3ec' : '#121212',
+              letterSpacing: '-0.14px',
+              transition: 'color 0.3s ease, opacity 0.2s ease',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {item.label}
+          </Link>
+        ))}
+      </nav>
+
       {/* Cart Icon */}
       <CartIcon isOnDark={isOnDark} />
 
